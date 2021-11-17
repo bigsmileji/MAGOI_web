@@ -47,22 +47,6 @@ $('.about_slide').slick({
     adaptiveHeight: true
 });
 
-// $(window).scroll(function(){
-//     if ($(window).scrollTop() >= 96) {
-//         $('header').addClass('scroll');
-//     }
-//     else {
-//         $('header').removeClass('scroll');
-//     }
-//     //
-//     if ($(window).scrollTop() >= 980) {
-//         $('#nav').addClass('sticky');
-//     }
-//     else {
-//         $('#nav').removeClass('sticky');
-//     }
-// });
-
 $(".tab_con").hide();
 $(".tab_con:first").show();
 
@@ -70,7 +54,7 @@ $(".tabs li").click(function(){
     $(".tabs li").removeClass("active");
     $(this).addClass("active");
     $(".tab_con").hide()
-    var activeTab = $(this).attr("rel");
+    var activeTab = $(this).attr("data-tab");
     $("#" + activeTab).fadeIn()
 });
 
